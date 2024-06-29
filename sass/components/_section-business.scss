@@ -1,0 +1,69 @@
+.business {
+    @extend %centered;
+
+    @media screen and (max-width: $max-tablet) {
+        display: none;
+        // position: absolute;
+        // white-space: nowrap;
+        // width: 1px;
+        // height: 1px;
+        // overflow: hidden;
+        // border: 0;
+        // padding: 0;
+        // clip: rect(0 0 0 0);
+        // clip-path: inset(50%);
+        // margin: -1px;
+
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        @include sectionPad($size-top: 94px, $size-bottom: 47px);
+    }
+}
+
+.business__list {
+    @media screen and (min-width: $desktop) {
+        @include sectionSetFlex($type: flex, $wrap: nowrap);
+    }
+}
+
+
+.business__item {
+    position: relative;
+    @include centeredFlex();
+    max-width: 370px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+
+.business__images {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.business__descr {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    background-color: $bg-about-abs;
+    color: $white-color;
+
+    font-weight: $primary-bold;
+    font-size: $secondary-font-size;
+    line-height: 1.14;
+    text-transform: uppercase;
+}

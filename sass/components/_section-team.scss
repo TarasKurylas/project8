@@ -1,0 +1,83 @@
+.team {
+  @extend %centered;
+  @include sectionPad();
+  background-color: $bg-ghost-white;
+}
+
+.team__list {
+  @extend %list;
+
+  @media screen and (min-width: $tablet) {
+    @include setFlexWrap();
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.team__item {
+  background-color: $white-color;
+  box-shadow: $team-box-shadow;
+  border-radius: 0 0 4px 4px;
+
+  line-height: 1.2;
+
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    flex-basis: calc((100% - 1 * 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: $max-mobile) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team__images {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.team__content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.team__member-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-size: $primary-font-size;
+  font-weight: $accent-weight;
+}
+
+.team__member-description {
+  @extend %description;
+  margin-bottom: 16px;
+}
