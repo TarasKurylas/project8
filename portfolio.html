@@ -37,15 +37,15 @@
             <!-- menu -->
             <ul class="site-nav list">
               <li class="site-nav__item">
-                <a class="site-nav__link point link" href="./index.html"
+                <a
+                  class="site-nav__link site-nav__link--current point link"
+                  href="./index.html"
+                  aria-current="page"
                   >Студія</a
                 >
               </li>
               <li class="site-nav__item">
-                <a
-                  class="site-nav__link site-nav__link--current point link"
-                  href="./portfolio.html"
-                  aria-current="page"
+                <a class="site-nav__link point link" href="./portfolio.html"
                   >Портфоліо</a
                 >
               </li>
@@ -103,11 +103,11 @@
             >
               <use
                 class="mobile-menu__icon-burger"
-                href="./images/icons.svg#icon-burger"
+                href="./images/icon-sprite.svg#icon-menu_40px"
               ></use>
               <use
                 class="mobile-menu__icon-cross"
-                href="./images/icons.svg#icon-mobile-close"
+                href="./images/icon-sprite.svg#icon-close_40px"
               ></use>
             </svg>
           </button>
@@ -130,7 +130,7 @@
                 >
                   <use
                     class="mobile-menu__icon-close"
-                    href="./images/icons.svg#icon-mobile-close"
+                    href="./images/icon-sprite.svg#icon-close_40px"
                   ></use>
                 </svg>
               </button>
@@ -140,6 +140,7 @@
                   <a
                     class="header-mob-menu__link point link"
                     href="./index.html"
+                    aria-current="page"
                     >Студія</a
                   >
                 </li>
@@ -147,7 +148,6 @@
                   <a
                     class="header-mob-menu__link header-mob-menu__link--current point link"
                     href="./portfolio.html"
-                    aria-current="page"
                     >Портфоліо</a
                   >
                 </li>
@@ -938,7 +938,7 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/filter.js" type="module"></script>
   </body>
